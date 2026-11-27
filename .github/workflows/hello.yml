@@ -1,0 +1,19 @@
+name: Hello
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello
+        run: echo "Hello from a robot computer"
+
+      - name: Look around the robot's computer
+        run: |
+          date
+          uname -a
+          pwd
+          ls -la
